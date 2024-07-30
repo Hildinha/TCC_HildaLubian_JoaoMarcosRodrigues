@@ -3,4 +3,4 @@ Repositório referente ao Projeto Final de Curso de Engenharia de Telecomunicaç
 
 Os códigos apresentados neste repositório são:
 
-* {c:red}uidaleatorio.py{/c} - Este código gera um UID (Identificador Único) aleatório para um cartão, combinando letras minúsculas e dígitos. Foi utilizado na geração de *tags* aleatórias para as avaliações do sistema.
+* <span style="color:red">uidaleatorio.py</span> - Este código gera um UID (Identificador Único) aleatório para um cartão, combinando letras minúsculas e dígitos. Foi utilizado na geração de *tags* aleatórias para as avaliações do sistema.
