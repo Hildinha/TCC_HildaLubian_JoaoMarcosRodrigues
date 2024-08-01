@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Vertical menu with gooey effect on hover</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="../static/styleHP.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<header class="header">
+  <a class="navbar-header">
+    <img src="../static/img/logoHori.png" width="276" height="21"> | Sistema de Reserva de Salas <i data-feather="key"></i>
+  </a>
+</header>
+
+
+<nav class="navbar">
+  <ul class="navbar__menu">
+    <li class="navbar__item">
+      <a href="/PagInicial" class="navbar__link" id="PagInicialLink"><i data-feather="home"></i><span>Home</span></a>
+    </li>
+    <li class="navbar__item">
+      <a href="/Salas" class="navbar__link" id="SalasLink"><i data-feather="key"></i><span>Reservar Sala</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="/Schedule" class="navbar__link" id="ScheduleLink"><i data-feather="clock"></i><span>Reservas</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="/Hist" class="navbar__link" id="historicoLink"><i data-feather="archive"></i><span>Histórico</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="/Admin" class="navbar__link" id="adminLink"><i data-feather="user"></i><span>Acesso Restrito</span></a>      
+    </li>
+    <!--li class="navbar__item">
+      <a class="navbar__link" id="support"><i data-feather="message-square"></i><span>Suporte</span></a>      
+    </li-->
+  </ul>
+</nav>
+
+<div class="table-container">
+  <table id="tabela-reservas">
+    <thead>
+      <tr>
+        <th>Número de Sala</th>
+        <th>Reserva</th>
+        <th>Hora Início</th>
+        <th>Hora Final</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+</div>
+
+
+<!-- partial -->
+  <script src='https://unpkg.com/feather-icons'></script><script  src="../static/scriptHP.js"></script>
+
+<!--footer>
+  <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+  <p><a href="mailto:contato@meusite.com">contato@meusite.com</a></p>
+  <p><a href="/termos">Termos de Serviço</a> | <a href="/privacidade">Política de Privacidade</a></p>
+</footer-->
+</body>
+</html>
