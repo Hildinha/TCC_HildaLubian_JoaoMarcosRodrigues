@@ -17,7 +17,7 @@ from dbutils.pooled_db import PooledDB
 config = {
     "host": "localhost",
     "user": "root",
-    "password": "27769304Jm@",
+    "password": "<senha_do_banco_de_Dados>",
     "database": "sissal",
 }
 
