@@ -13,11 +13,12 @@ from threading import Lock
 from concurrent.futures import ThreadPoolExecutor
 from dbutils.pooled_db import PooledDB
 
+
 ######## Acessos da base #########
 config = {
     "host": "localhost",
     "user": "root",
-    "password": "<senha_do_banco_de_Dados>",
+    "password": "27769304Jm@",
     "database": "sissal",
 }
 
@@ -184,29 +185,35 @@ def login():
             cursor = connection.cursor()
             cursor.execute(f"SELECT userName from sissal.users where userName = %s", (name,))
             result = cursor.fetchone()
-            print(result)
-        if not result:
-            resposta = {'mensagem': 'Login Falhou!'}
-            return jsonify(resposta)
+            print("RESULTADO:",result)
+        if result == None:
+            resposta = {'Login Inexistente'}
+            return resposta
         else:
             if verificar_senha(password, name):
-                nome, = result[0]
-                resposta = {'mensagem': 'Login bem-sucedido!'}
+                resposta = "Sucesso"
+                return resposta
                 # Configurar a sessão do usuário
-                session['user'] = nome  # Novo: Armazena o nome do usuário na sessão
-                session['session_id'] = str(uuid.uuid4())  # Novo: Adiciona um identificador de sessão único
-                session['logged_in'] = True  # Novo: Marca que o usuário está logado
-                session.modified = True
-                resp = make_response(jsonify(resposta))
-                print(resp)
-                resp.set_cookie('session_id', "oi", max_age=10)  # Define o cookie com o ID do usuário
-                return resp
+                # session['user'] = nome  # Novo: Armazena o nome do usuário na sessão
+                # session['session_id'] = str(uuid.uuid4())  # Novo: Adiciona um identificador de sessão único
+                # session['logged_in'] = True  # Novo: Marca que o usuário está logado
+                # session.modified = True
+                # resp = make_response(jsonify(resposta))
+                # print(resp)
+                # resp.set_cookie('session_id', "oi", max_age=10)  # Define o cookie com o ID do usuário
+                # return resp
             else:
-                resposta = {'mensagem': 'Login Falhou!'}
-                return jsonify(resposta)
+                resposta = {'Login Failed'}
+                return resposta
 
-    executor.submit(process_login, name, password)
-    return jsonify({'mensagem': 'Login bem-sucedido!'})
+    future = executor.submit(process_login, name, password)
+    resp = future.result()
+    print(resp)
+    if resp == 'Sucesso':
+        print("mandei sucesso")
+        return jsonify({'mensagem': 'Login bem-sucedido!'})
+    else: 
+        return jsonify({'mensagem': 'Login Falhou!'})
    
 
 @app.route('/Cadastro', methods=['POST', 'OPTIONS'])
