@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Vertical menu with gooey effect on hover</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./static/styleHP.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+  $(function() {
+      $( "#calendario" ).datepicker({
+        //onSelect: handleDateSelection
+        dateFormat: 'dd/mm/yy'
+      });
+  });
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<header class="header">
+  <a class="navbar-header">
+    <img src="../static/img/logoHori.png" width="276" height="21"> | Sistema de Reserva de Salas <i data-feather="key"></i>
+  </a>
+</header>
+
+
+<nav class="navbar">
+  <ul class="navbar__menu">
+    <li class="navbar__item">
+      <a href="/PagInicial" class="navbar__link" id="PagInicialLink"><i data-feather="home"></i><span>Home</span></a>
+    </li>
+    <li class="navbar__item">
+      <a href="/Salas" class="navbar__link" id="SalasLink"><i data-feather="key"></i><span>Reservar Sala</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="/Schedule" class="navbar__link" id="ScheduleLink"><i data-feather="clock"></i><span>Reservas</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="/Hist" class="navbar__link" id="historicoLink"><i data-feather="archive"></i><span>Histórico</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="/Admin" class="navbar__link" id="adminLink"><i data-feather="user"></i><span>Acesso Restrito</span></a>        
+    </li>
+  </ul>
+</nav>
+
+<div class="door-container">
+  <div class="movie-container"> 
+    <label>Selecione o Andar:</label> 
+    <select id="movie"> 
+        <option value="1">1º Andar</option> 
+        <option value="2">2º Andar</option> 
+        <option value="3">3º Andar</option> 
+        <option value="4">4º Andar</option> 
+    </select> 
+  </div>
+
+  <div class="calendar-container">
+    <p>Data: <input type="text" id="calendario" /> <input type="text" id="hour" size="30" placeholder="HH:MM:SS"> <button id="consultSala">Procurar</button></p>
+  </div>
+
+  <ul class="showcase"> 
+      <li> 
+          <div class="seat"></div> 
+          <small>Disponível</small> 
+      </li> 
+      <li> 
+          <div class="seat selected"></div> 
+          <small>Selecionada</small> 
+      </li> 
+      <li> 
+          <div class="seat occupied"></div> 
+          <small>Ocupada</small> 
+      </li> 
+  </ul> 
+
+
+  <div class ="container">
+      <div class="seats-container"> 
+          <div class="row">
+              <div class="seat" id="door1"></div><span id="span1">101</span>
+              <div class="seat" id="door3"></div><span id="span3">101</span>
+              <div class="seat" id="door5"></div><span id="span5">101</span>
+              <div class="seat" id="door7"></div><span id="span7">101</span>
+              <div class="seat" id="door9"></div><span id="span9">101</span>
+          </div>          
+          <div class="row">
+              <div class="seat" id="door2"></div><span id="span2">101</span>
+              <div class="seat" id="door4"></div><span id="span4">101</span>
+              <div class="seat" id="door6"></div><span id="span6">101</span>
+              <div class="seat" id="door8"></div><span id="span8">101</span>
+              <div class="seat" id="door10"></div><span id="span10">101</span>
+          </div>
+      </div> 
+  </div>
+</div>
+
+<!-- partial -->
+  <script src='https://unpkg.com/feather-icons'></script>
+  <script  src="./static/scriptSl.js"></script>
+  <script  src="./static/scriptSl2.js"></script>
+
+</body>
+</html>

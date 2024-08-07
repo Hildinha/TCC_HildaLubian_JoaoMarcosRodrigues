@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Vertical menu with gooey effect on hover</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="../static/styleHP.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<header class="header">
+  <a class="navbar-header">
+    <img src="../static/img/logoHori.png" width="276" height="21"> | Sistema de Reserva de Salas <i data-feather="key"></i>
+  </a>
+</header>
+
+
+<nav class="navbar">
+  <ul class="navbar__menu">
+    <li class="navbar__item">
+      <a href="/PagInicial" class="navbar__link" id="PagInicialLink"><i data-feather="home"></i><span>Home</span></a>
+    </li>
+    <li class="navbar__item">
+      <a href="/Salas" class="navbar__link" id="SalasLink"><i data-feather="key"></i><span>Reservar Sala</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="/Schedule" class="navbar__link" id="ScheduleLink"><i data-feather="clock"></i><span>Reservas</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="/Hist" class="navbar__link" id="historicoLink"><i data-feather="archive"></i><span>Histórico</span></a>        
+    </li>
+    <li class="navbar__item">
+      <a href="/Admin" class="navbar__link" id="adminLink"><i data-feather="user"></i><span>Acesso Restrito</span></a>        
+    </li>
+  </ul>
+</nav>
+
+<div class="schedule-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Horário</th>
+        <th>Segunda-feira</th>
+        <th>Terça-feira</th>
+        <th>Quarta-feira</th>
+        <th>Quinta-feira</th>
+        <th>Sexta-feira</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="07:00:00">
+        <td>07:00 - 09:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr id="09:00:00">
+        <td>09:00 - 11:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr id="11:00:00">
+        <td>11:00 - 13:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr id="14:00:00">
+        <td>14:00 - 16:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr id="16:00:00">
+        <td>16:00 - 18:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr id="18:00:00">
+        <td>18:00 - 20:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr id="20:00:00">
+        <td>20:00 - 22:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- partial -->
+  <script src='https://unpkg.com/feather-icons'></script><script  src="../static/script_week.js"></script>
+
+</body>
+</html>
